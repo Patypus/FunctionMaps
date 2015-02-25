@@ -61,6 +61,15 @@ namespace CsFunctionMaps.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Unable to validate null value..
+        /// </summary>
+        internal static string CantValidateNullValue {
+            get {
+                return ResourceManager.GetString("CantValidateNullValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Unable to validate value of type {0}..
         /// </summary>
         internal static string UnableToValidate {

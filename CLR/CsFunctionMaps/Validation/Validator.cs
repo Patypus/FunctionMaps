@@ -22,9 +22,23 @@ namespace CsFunctionMaps.Validator
 
         public IValidationResult ValidateValue(object value)
         {
-            return validationFunctions.ContainsKey(value.GetType()) 
-                        ? validationFunctions[value.GetType()].Invoke(value)
-                        : CreateUnableToValidateValueResult(value.GetType().Name);
+            IValidationResult result;
+            if (value != null)
+            {
+                result = validationFunctions.ContainsKey(value.GetType()) 
+                            ? validationFunctions[value.GetType()].Invoke(value)
+                            : CreateUnableToValidateValueResult(value.GetType().Name);
+            }
+            else
+            {
+                result = CreateNullValueValidationResult();
+            }
+            return result;
+        }
+
+        private IValidationResult CreateNullValueValidationResult()
+        {
+            return new ValidationResult(false, StringResources.CantValidateNullValue);
         }
 
         private IValidationResult CreateUnableToValidateValueResult(string typeThatCantBeValidated)
