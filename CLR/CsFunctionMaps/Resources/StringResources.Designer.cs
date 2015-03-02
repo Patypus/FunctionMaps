@@ -70,6 +70,15 @@ namespace CsFunctionMaps.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Provided integer value is invalid as it is negative..
+        /// </summary>
+        internal static string IntegerValueInvalid {
+            get {
+                return ResourceManager.GetString("IntegerValueInvalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Provided string value is invalid as it is empty. Please enter a value..
         /// </summary>
         internal static string StringValueInvalid {

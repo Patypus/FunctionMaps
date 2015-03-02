@@ -16,7 +16,8 @@ namespace CsFunctionMaps.Validator
         {
             validationFunctions = new Dictionary<Type, Func<object, IValidationResult>>
             {
-                { typeof(string), (object value) => ValidationFunctions.ValidateStringValue(value) }
+                { typeof(string), (value) => ValidationFunctions.ValidateStringValue(value) },
+                { typeof(int), (value) => ValidationFunctions.ValidateIntObject(value) }
             };
         }
 

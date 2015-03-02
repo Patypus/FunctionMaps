@@ -120,6 +120,9 @@
   <data name="CantValidateNullValue" xml:space="preserve">
     <value>Unable to validate null value.</value>
   </data>
+  <data name="IntegerValueInvalid" xml:space="preserve">
+    <value>Provided integer value is invalid as it is negative.</value>
+  </data>
   <data name="StringValueInvalid" xml:space="preserve">
     <value>Provided string value is invalid as it is empty. Please enter a value.</value>
   </data>
