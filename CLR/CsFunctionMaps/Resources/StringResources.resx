@@ -120,7 +120,13 @@
   <data name="CantValidateNullValue" xml:space="preserve">
     <value>Unable to validate null value.</value>
   </data>
+  <data name="StringValueInvalid" xml:space="preserve">
+    <value>Provided string value is invalid as it is empty. Please enter a value.</value>
+  </data>
   <data name="UnableToValidate" xml:space="preserve">
     <value>Unable to validate value of type {0}.</value>
+  </data>
+  <data name="ValidationPassed" xml:space="preserve">
+    <value>Value is valid.</value>
   </data>
 </root>

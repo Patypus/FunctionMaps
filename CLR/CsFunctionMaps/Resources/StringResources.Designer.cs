@@ -70,11 +70,29 @@ namespace CsFunctionMaps.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Provided string value is invalid as it is empty. Please enter a value..
+        /// </summary>
+        internal static string StringValueInvalid {
+            get {
+                return ResourceManager.GetString("StringValueInvalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Unable to validate value of type {0}..
         /// </summary>
         internal static string UnableToValidate {
             get {
                 return ResourceManager.GetString("UnableToValidate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Value is valid..
+        /// </summary>
+        internal static string ValidationPassed {
+            get {
+                return ResourceManager.GetString("ValidationPassed", resourceCulture);
             }
         }
     }
