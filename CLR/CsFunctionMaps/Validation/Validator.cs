@@ -10,25 +10,25 @@ namespace CsFunctionMaps.Validator
 {
     public class Validator
     {
-        private readonly IDictionary<Type, Func<object, IValidationResult>> validationFunctions;
+        private readonly IDictionary<ValueTypes, Func<object, IValidationResult>> validationFunctions;
 
         public Validator()
         {
-            validationFunctions = new Dictionary<Type, Func<object, IValidationResult>>
+            validationFunctions = new Dictionary<ValueTypes, Func<object, IValidationResult>>
             {
-                { typeof(string), (value) => ValidationFunctions.ValidateStringValue(value) },
-                { typeof(int), (value) => ValidationFunctions.ValidateIntObject(value) }
+                { ValueTypes.String, (value) => ValidationFunctions.ValidateStringValue(value) },
+                { ValueTypes.Int, (value) => ValidationFunctions.ValidateIntObject(value) }
             };
         }
 
-        public IValidationResult ValidateValue(object value)
+        public IValidationResult ValidateValue(Tuple<ValueTypes, object> valueDetails)
         {
             IValidationResult result;
-            if (value != null)
+            if (valueDetails != null)
             {
-                result = validationFunctions.ContainsKey(value.GetType()) 
-                            ? validationFunctions[value.GetType()].Invoke(value)
-                            : CreateUnableToValidateValueResult(value.GetType().Name);
+                result = validationFunctions.ContainsKey(valueDetails.Item1)
+                            ? validationFunctions[valueDetails.Item1].Invoke(valueDetails.Item2)
+                            : CreateUnableToValidateValueResult(valueDetails.Item1.ToString());
             }
             else
             {
