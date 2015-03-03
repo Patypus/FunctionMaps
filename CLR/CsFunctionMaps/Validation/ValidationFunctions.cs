@@ -30,6 +30,30 @@ namespace CsFunctionMaps.Validation
             return new ValidationResult(validationSuccess, validationMessage);
         }
 
-        //lat/longs?
+        public static IValidationResult ValidateLattitude(object valueToValidate)
+        {
+            var castValue = (double)valueToValidate;
+
+            var valueOverMinus90 = castValue >= -90.00;
+            var valueUnderPlus90 = castValue <= 90.00;
+
+            var validationSuccess = valueOverMinus90 && valueUnderPlus90;
+            var validationMessage = validationSuccess ? StringResources.ValidationPassed : StringResources.IntegerValueInvalid;
+
+            return new ValidationResult(validationSuccess, validationMessage);
+        }
+
+        public static IValidationResult ValidateLongitude(object valueToValidate)
+        {
+            var castValue = (double)valueToValidate;
+
+            var valueOverMinus180 = castValue >= -180.00;
+            var valueUnderPlus180 = castValue <= 180.00;
+
+            var validationSuccess = valueOverMinus180 && valueUnderPlus180;
+            var validationMessage = validationSuccess ? StringResources.ValidationPassed : StringResources.IntegerValueInvalid;
+
+            return new ValidationResult(validationSuccess, validationMessage);
+        }
     }
 }

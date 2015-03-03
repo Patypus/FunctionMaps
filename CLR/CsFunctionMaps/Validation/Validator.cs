@@ -17,7 +17,9 @@ namespace CsFunctionMaps.Validator
             validationFunctions = new Dictionary<ValueTypes, Func<object, IValidationResult>>
             {
                 { ValueTypes.String, (value) => ValidationFunctions.ValidateStringValue(value) },
-                { ValueTypes.Int, (value) => ValidationFunctions.ValidateIntObject(value) }
+                { ValueTypes.Int, (value) => ValidationFunctions.ValidateIntObject(value) },
+                { ValueTypes.Lattitude, (value) => ValidationFunctions.ValidateLattitude(value) },
+                { ValueTypes.Longitude, (value) => ValidationFunctions.ValidateLongitude(value) }
             };
         }
 

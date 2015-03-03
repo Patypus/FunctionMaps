@@ -79,6 +79,24 @@ namespace CsFunctionMaps.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Provided Latitude value is out of range. Value should be between -90 and 90 degrees..
+        /// </summary>
+        internal static string LatitudeValueInvalid {
+            get {
+                return ResourceManager.GetString("LatitudeValueInvalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Provided Longitude value is out of range. Value should be between -180 and 180 degrees..
+        /// </summary>
+        internal static string LongituveValueInvalid {
+            get {
+                return ResourceManager.GetString("LongituveValueInvalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Provided string value is invalid as it is empty. Please enter a value..
         /// </summary>
         internal static string StringValueInvalid {

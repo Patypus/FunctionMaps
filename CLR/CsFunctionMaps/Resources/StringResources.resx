@@ -123,6 +123,12 @@
   <data name="IntegerValueInvalid" xml:space="preserve">
     <value>Provided integer value is invalid as it is negative.</value>
   </data>
+  <data name="LatitudeValueInvalid" xml:space="preserve">
+    <value>Provided Latitude value is out of range. Value should be between -90 and 90 degrees.</value>
+  </data>
+  <data name="LongituveValueInvalid" xml:space="preserve">
+    <value>Provided Longitude value is out of range. Value should be between -180 and 180 degrees.</value>
+  </data>
   <data name="StringValueInvalid" xml:space="preserve">
     <value>Provided string value is invalid as it is empty. Please enter a value.</value>
   </data>
