@@ -14,6 +14,6 @@ public interface ExceptionConverter {
 	 * @param exceptionToConvert - The exception of an internal type to convert
 	 * @return Exception type for external classes or systems.
 	 */
-	SystemException ConvertException( final Exception exceptionToConvert );
+	SystemException convertException( final Exception exceptionToConvert );
 	
 }
